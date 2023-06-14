@@ -1,6 +1,7 @@
 <?php
 
-class rajaongkir {
+class rajaongkir
+ {
   private $key      = '21de7e758efbb4b3c4e4b2a8d99c66b1';
   private $city_url = 'https://api.rajaongkir.com/starter/city';
   private $cost_url = 'https://api.rajaongkir.com/starter/cost';
@@ -39,11 +40,11 @@ curl_close($curl);
 if ($err) {
   return "cURL Error #:" . $err;
 } else {
-  echo $response;
+  return $response;
 }
  }
 }
-function get_cost($id_kota_asal,$id_kota_tujuan, $berat, $kurir)
+function get_cost($id_kota_asal, $id_kota_tujuan, $berat, $kurir)
 {
     $curl = curl_init();
 
